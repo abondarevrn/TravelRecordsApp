@@ -3,7 +3,14 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="TravelRecordsApp.NewTravelPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save"
+                     Clicked="Save_Clicked"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
+        <StackLayout>
+           <Entry x:Name="experienceEntry"
+               Placeholder="Write your experience"/>
+        </StackLayout>
     </ContentPage.Content>
-
 </ContentPage>

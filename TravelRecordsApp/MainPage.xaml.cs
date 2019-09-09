@@ -8,14 +8,22 @@ using Xamarin.Forms;
 
 namespace TravelRecordsApp
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
-    [DesignTimeVisible(false)]
+    [DesignTimeVisible(true)]
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        public void LoginButton_Clicked(object sender, EventArgs e)
+        {
+            bool isUsernameValid = !string.IsNullOrEmpty(usernameEntry.Text);
+            bool isPasswordValid = !string.IsNullOrEmpty(passwordEntry.Text);
+            if (isUsernameValid && isPasswordValid)
+            {
+                Navigation.PushAsync(new HomePage());
+            } 
         }
     }
 }

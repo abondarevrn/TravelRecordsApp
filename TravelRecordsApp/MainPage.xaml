@@ -1,18 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    x:Class="TravelRecordsApp.MainPage">
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label
-            Text="Welcome to Xamarin.Forms!"
-            HorizontalOptions="Center"
-            VerticalOptions="CenterAndExpand" />
-
+    x:Class="TravelRecordsApp.MainPage"
+    Title="Travel App">
+    <StackLayout x:Name="loginFormLayout"
+        VerticalOptions="Center"
+        Margin="16,8">
+        <Entry x:Name="usernameEntry"
+            Placeholder="Username"
+            Keyboard="Email"/>
+        <Entry x:Name="passwordEntry"
+               Placeholder="Password"
+               IsPassword="True"/>
+        <Button x:Name="loginButton"
+            Style="{StaticResource normalButton}"
+            Text="Log in"
+            Clicked="LoginButton_Clicked"
+            Margin="0,50,0,0"/>
     </StackLayout>
 
 </ContentPage>

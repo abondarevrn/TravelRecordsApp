@@ -3,7 +3,18 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="TravelRecordsApp.PostDetailPage">
-    <ContentPage.Content>
-    </ContentPage.Content>
+    <StackLayout x:Name="postDetailFormStackLayout"
+        Margin="16"
+        VerticalOptions="Center">
+        <Entry x:Name="postNameEntry" />
+        <Button x:Name="postUpdateButton"
+                Style="{StaticResource normalButton}"
+                Text="Update"
+                Clicked="PostUpdateButton_Clicked"/>
+        <Button x:Name="postDeleteButton"
+                Style="{StaticResource destructiveButton}"
+                Text="Delete"
+                Clicked="PostDeleteButton_Clicked"/>
+    </StackLayout>
 
 </ContentPage>
